@@ -9,7 +9,7 @@ namespace AteaWeather.Services.Services;
 
 public class TableService : ITableService
 {
-    private const string TableName = "logs"; // Table name
+    private const string TableName = "ExecutionLog"; // Table name
     private static CloudTable _table;
 
     public void Initialize(string connectionString)

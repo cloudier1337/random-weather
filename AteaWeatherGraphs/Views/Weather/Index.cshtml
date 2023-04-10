@@ -1,0 +1,102 @@
+﻿@page
+@model System.Collections.Generic.List<AteaWeatherGraphs.Models.WeatherData>
+
+<div>
+    <canvas id="minTempChart"></canvas>
+</div>
+
+<div>
+    <canvas id="highestWindSpeedChart"></canvas>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Initialize charts
+        var minTempChart = new Chart(document.getElementById('minTempChart').getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: [],
+                datasets: [{
+                    label: 'Min Temperature',
+                    data: [],
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+
+        var highestWindSpeedChart = new Chart(document.getElementById('highestWindSpeedChart').getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: [],
+                datasets: [{
+                    label: 'Highest Wind Speed',
+                    data: [],
+                    backgroundColor: 'rgba(255, 206, 86, 0.2)',
+                    borderColor: 'rgba(255, 206, 86, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+
+        // Function to get data from the server and update charts
+        function updateCharts() {
+            // Get data for min temperature chart
+            $.get('/Weather/GetMinTemperatureData', function (data) {
+                // Clear existing data
+                minTempChart.data.labels = [];
+                minTempChart.data.datasets[0].data = [];
+
+                // Add new data
+                data.forEach(function (item) {
+                    minTempChart.data.labels.push(item.country + ' ' + item.city);
+                    minTempChart.data.datasets[0].data.push(item.temperature);
+                });
+
+                // Update chart
+                minTempChart.update();
+            });
+
+            // Get data for highest wind speed chart
+            $.get('/Weather/GetHighestWindSpeedData', function (data) {
+                // Clear existing data
+                highestWindSpeedChart.data.labels = [];
+                highestWindSpeedChart.data.datasets[0].data = [];
+
+                // Add new data
+                data.forEach(function (item) {
+                    highestWindSpeedChart.data.labels.push(item.country + ' ' + item.city);
+                    highestWindSpeedChart.data.datasets[0].data.push(item.windSpeed);
+                });
+
+                // Update chart
+                highestWindSpeedChart.update();
+            });
+        }
+
+        // Call updateCharts function initially and every minute
+        updateCharts();
+        setInterval(updateCharts, 60000);
+    </script>
+
+}

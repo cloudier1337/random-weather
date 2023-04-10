@@ -30,6 +30,8 @@ public class GetWeatherDataController : ControllerBase
         
         try
         {
+            _tableService.Initialize("myconnectionstring");
+
             // Retrieve logs from the table storage
             List<LogRecordEntityDto> logs = await _tableService.GetLogsAsync(fromDateTime, toDateTime);
 
@@ -49,7 +51,7 @@ public class GetWeatherDataController : ControllerBase
     {
         try
         {
-            
+            _blobService.Initialize("myconnectionstring");
             // Retrieve blob content
             string blobContent = await _blobService.GetBlobAsync(blobName);
 

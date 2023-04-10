@@ -1,7 +1,29 @@
+using AteaWeatherGraphs.Data;
+using AteaWeatherGraphs.Models;
+using Microsoft.EntityFrameworkCore;
+
+
 var builder = WebApplication.CreateBuilder(args);
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<IWeatherDataRepository, WeatherDataRepository>();
+
+// Add database context
+builder.Services.AddDbContext<WeatherDbContext>(options =>
+{
+    options.UseSqlite(builder.Configuration.GetConnectionString("WeatherDataDb"));
+    // Create the database if it doesn't exist
+    using (var context = new WeatherDbContext(new DbContextOptions<WeatherDbContext>()))
+    {
+        context.Database.EnsureCreated();
+    }
+    
+});
+
+
 
 var app = builder.Build();
 
