@@ -12,30 +12,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6e28d04-4f9d-43d3-8e9f-6f839f53cb73" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AteaWeather.Services/AteaWeather.Services.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AteaWeather.Services/AteaWeather.Services.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AteaWeather.Services/Properties/serviceDependencies.local.json" beforeDir="false" afterPath="$PROJECT_DIR$/AteaWeather.Services/Properties/serviceDependencies.local.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AteaWeather.Services/Services/BlobService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AteaWeather.Services/Services/BlobService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AteaWeather.Services/Services/Interfaces/IBlobService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AteaWeather.Services/Services/Interfaces/IBlobService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AteaWeather.Services/Services/Interfaces/ITableService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AteaWeather.Services/Services/Interfaces/ITableService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AteaWeather.Services/Services/TableService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AteaWeather.Services/Services/TableService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AteaWeather/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AteaWeather/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AteaWeatherGraphs/AteaWeatherGraphs.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AteaWeatherGraphs/AteaWeatherGraphs.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AteaWeatherGraphs/Controllers/WeatherController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AteaWeatherGraphs/Controllers/WeatherController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AteaWeatherGraphs/Data/IWeatherDataRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AteaWeatherGraphs/Data/IWeatherDataRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AteaWeatherGraphs/Data/WeatherDataRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AteaWeatherGraphs/Data/WeatherDataRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AteaWeatherGraphs/Models/WeatherData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AteaWeatherGraphs/Models/WeatherData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AteaWeatherGraphs/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AteaWeatherGraphs/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AteaWeatherGraphs/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/AteaWeatherGraphs/Views/Shared/_Layout.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AteaWeatherGraphs/Views/Weather/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/AteaWeatherGraphs/Views/Weather/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AteaWeatherGraphs/Views/_ViewImports.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/AteaWeatherGraphs/Views/_ViewImports.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AteaWeatherGraphs/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/AteaWeatherGraphs/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AteaWeatherGraphs/weatherdata.db" beforeDir="false" afterPath="$PROJECT_DIR$/AteaWeatherGraphs/weatherdata.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AteaWeatherGraphs/weatherdata.db-shm" beforeDir="false" afterPath="$PROJECT_DIR$/AteaWeatherGraphs/weatherdata.db-shm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AteaWeatherGraphs/weatherdata.db-wal" beforeDir="false" afterPath="$PROJECT_DIR$/AteaWeatherGraphs/weatherdata.db-wal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AteaWeatherGraphs/wwwroot/js/site.js" beforeDir="false" afterPath="$PROJECT_DIR$/AteaWeatherGraphs/wwwroot/js/site.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CallWeatherDataFunction/GetWeatherData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CallWeatherDataFunction/GetWeatherData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CallWeatherDataFunction/Properties/serviceDependencies.local.json" beforeDir="false" afterPath="$PROJECT_DIR$/CallWeatherDataFunction/Properties/serviceDependencies.local.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CallWeatherDataFunction/WeatherDataFunction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CallWeatherDataFunction/WeatherDataFunction.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +39,10 @@
     <setting file="file://$PROJECT_DIR$/AteaWeatherGraphs/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AteaWeatherGraphs/wwwroot/lib/jquery/dist/jquery.min.map" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/klavdijaucakar/Documents/git/atea/AteaWeather/CallWeatherDataFunction/WeatherDataFunction.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/19ba5a289f2afd3f4d5e862cb3f3efee6181683a31ee31b86c2298b1f51114b/ServiceProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2fdfe4cd8f7a22eab69df7fa17f26aaa318f3691fa50cf599d7cf6a191b282/Timer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bcae882191178c8bf44c9add4cdeffa874a7afe629e3e56e9280f5896e953425/Monitor.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bebd253e21dcf766929bfdfd74615bfe46e6e1693b289273dbdb82152893/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -258,7 +244,7 @@
       <option name="presentableId" value="Default" />
       <updated>1680792701950</updated>
       <workItem from="1680792703116" duration="47305000" />
-      <workItem from="1681132038336" duration="12456000" />
+      <workItem from="1681132038336" duration="17991000" />
     </task>
     <servers />
   </component>
@@ -497,26 +483,26 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/AteaWeatherGraphs/Controllers/WeatherController.cs</url>
-          <line>74</line>
+          <line>61</line>
           <properties documentPath="$PROJECT_DIR$/AteaWeatherGraphs/Controllers/WeatherController.cs" initialLine="74" containingFunctionPresentation="Method 'Index'">
             <startOffsets>
-              <option value="2129" />
+              <option value="1889" />
             </startOffsets>
             <endOffsets>
-              <option value="2187" />
+              <option value="1947" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/AteaWeatherGraphs/Controllers/WeatherController.cs</url>
-          <line>75</line>
+          <line>62</line>
           <properties documentPath="$PROJECT_DIR$/AteaWeatherGraphs/Controllers/WeatherController.cs" initialLine="75" containingFunctionPresentation="Method 'Index'">
             <startOffsets>
-              <option value="2196" />
+              <option value="1956" />
             </startOffsets>
             <endOffsets>
-              <option value="2221" />
+              <option value="1981" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="24" />
@@ -583,88 +569,114 @@
               <option value="529" />
             </startOffsets>
             <endOffsets>
-              <option value="611" />
+              <option value="641" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/AteaWeatherGraphs/Controllers/WeatherController.cs</url>
-          <line>60</line>
-          <properties documentPath="$PROJECT_DIR$/AteaWeatherGraphs/Controllers/WeatherController.cs" initialLine="60" containingFunctionPresentation="Method 'OnTimerElapsed'">
-            <startOffsets>
-              <option value="1857" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1887" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/AteaWeatherGraphs/Controllers/WeatherController.cs</url>
-          <line>81</line>
+          <line>68</line>
           <properties documentPath="$PROJECT_DIR$/AteaWeatherGraphs/Controllers/WeatherController.cs" initialLine="81" containingFunctionPresentation="Method 'GetCurrentWeatherData'">
             <startOffsets>
-              <option value="2290" />
+              <option value="2050" />
             </startOffsets>
             <endOffsets>
-              <option value="2324" />
+              <option value="2084" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/AteaWeatherGraphs/Controllers/WeatherController.cs</url>
-          <line>83</line>
+          <line>70</line>
           <properties documentPath="$PROJECT_DIR$/AteaWeatherGraphs/Controllers/WeatherController.cs" initialLine="83" containingFunctionPresentation="Method 'GetCurrentWeatherData'">
             <startOffsets>
-              <option value="2334" />
+              <option value="2094" />
             </startOffsets>
             <endOffsets>
-              <option value="3130" />
+              <option value="2890" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/AteaWeatherGraphs/Controllers/WeatherController.cs</url>
-          <line>98</line>
+          <line>85</line>
           <properties documentPath="$PROJECT_DIR$/AteaWeatherGraphs/Controllers/WeatherController.cs" initialLine="98" containingFunctionPresentation="Method 'GetCurrentWeatherData'">
             <startOffsets>
-              <option value="3145" />
+              <option value="2905" />
             </startOffsets>
             <endOffsets>
-              <option value="3180" />
+              <option value="2940" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/AteaWeatherGraphs/Controllers/WeatherController.cs</url>
-          <line>102</line>
+          <line>89</line>
           <properties documentPath="$PROJECT_DIR$/AteaWeatherGraphs/Controllers/WeatherController.cs" initialLine="102" containingFunctionPresentation="Method 'GetCurrentWeatherData'">
             <startOffsets>
-              <option value="3299" />
+              <option value="3059" />
             </startOffsets>
             <endOffsets>
-              <option value="3322" />
+              <option value="3082" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/AteaWeatherGraphs/Controllers/WeatherController.cs</url>
-          <line>122</line>
+          <line>109</line>
           <properties documentPath="$PROJECT_DIR$/AteaWeatherGraphs/Controllers/WeatherController.cs" initialLine="122" containingFunctionPresentation="Method 'GetCurrentWeatherData'">
             <startOffsets>
-              <option value="4340" />
+              <option value="4117" />
             </startOffsets>
             <endOffsets>
-              <option value="4387" />
+              <option value="4164" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/AteaWeatherGraphs/Controllers/WeatherController.cs</url>
+          <line>87</line>
+          <properties documentPath="$PROJECT_DIR$/AteaWeatherGraphs/Controllers/WeatherController.cs" initialLine="100" containingFunctionPresentation="Method 'GetCurrentWeatherData'">
+            <startOffsets>
+              <option value="2971" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3002" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/AteaWeatherGraphs/Controllers/WeatherController.cs</url>
+          <line>92</line>
+          <properties documentPath="$PROJECT_DIR$/AteaWeatherGraphs/Controllers/WeatherController.cs" initialLine="105" containingFunctionPresentation="Method 'GetCurrentWeatherData'">
+            <startOffsets>
+              <option value="3144" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3206" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/AteaWeatherGraphs/Controllers/WeatherController.cs</url>
+          <line>94</line>
+          <properties documentPath="$PROJECT_DIR$/AteaWeatherGraphs/Controllers/WeatherController.cs" initialLine="107" containingFunctionPresentation="Method 'GetCurrentWeatherData'">
+            <startOffsets>
+              <option value="3240" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3336" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

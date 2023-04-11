@@ -16,7 +16,7 @@ public class WeatherController : Controller
         _config = config;
 
         // Create timer with 60-second interval
-        _timer = new Timer(OnTimerElapsed, null, TimeSpan.Zero, TimeSpan.FromSeconds(60));
+        _timer = new Timer(async state => await GetCurrentWeatherData(), null, TimeSpan.Zero, TimeSpan.FromSeconds(60));
     }
     
     
@@ -55,20 +55,7 @@ public class WeatherController : Controller
         // Return data as JSON
         return Json(highestWindSpeedData);
     }
-
-    private async void OnTimerElapsed(object state)
-    {
-        await GetCurrentWeatherData();
-    }
-
-    protected override void Dispose(bool disposing)
-    {
-        if (disposing)
-        {
-            _timer.Dispose();
-        }
-        base.Dispose(disposing);
-    }
+    
     
     public async Task<IActionResult> Index()
     {
@@ -103,7 +90,7 @@ public class WeatherController : Controller
                 var lon = arrayData[1];
                 var country = arrayData[2];
 
-                var apiKey = _config["OpenWeatherMapApiKey"];
+                var apiKey = _config.GetValue<string>("OpenWeatherMapApiKey");
                 
                 var url = $"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={apiKey}";
                 var response = await httpClient.GetAsync(url);

@@ -15,8 +15,7 @@ builder.Services.AddScoped<IWeatherDataRepository, WeatherDataRepository>();
 builder.Services.AddDbContext<WeatherDbContext>(options =>
 {
     options.UseSqlite(builder.Configuration.GetConnectionString("WeatherDataDb"));
-});
-
+}, ServiceLifetime.Transient);
 
 
 var app = builder.Build();

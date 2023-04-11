@@ -3,6 +3,12 @@ obj/
 /packages/
 riderModule.iml
 /_ReSharper.Caches/
+
 *.local.json
 *.Development.json
 local.*.json
+
+
+# JetBrains Rider
+.idea
+*.sln.iml
