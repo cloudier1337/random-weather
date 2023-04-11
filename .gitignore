@@ -12,3 +12,4 @@ local.*.json
 # JetBrains Rider
 .idea
 *.sln.iml
+.idea/.idea.AteaWeather/.idea/workspace.xml
