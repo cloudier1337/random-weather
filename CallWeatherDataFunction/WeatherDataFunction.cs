@@ -23,8 +23,8 @@ namespace CallWeatherDataFunction
         public async Task Run([TimerTrigger("0 */1 * * * *")] TimerInfo myTimer, ILogger log)
         {
 
-            _blobService.Initialize("myConnectionString");
-            _tableService.Initialize("myConnectionString");
+            _blobService.Initialize();
+            _tableService.Initialize();
             
             log.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
 

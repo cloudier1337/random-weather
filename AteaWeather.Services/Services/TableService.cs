@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AteaWeather.Services.Services.Interfaces;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Table;
 
@@ -11,16 +13,26 @@ public class TableService : ITableService
 {
     private const string TableName = "ExecutionLog"; // Table name
     private static CloudTable _table;
+    private readonly IConfiguration _configuration;
+    private readonly ILogger<TableService> _logger;
 
-    public void Initialize(string connectionString)
+    public TableService(IConfiguration configuration, ILogger<TableService> logger)
     {
+        _configuration = configuration;
+        _logger = logger;
+    }
+
+    public void Initialize()
+    {
+        string connectionString = _configuration["AzureWebJobsStorage"] ?? throw new InvalidOperationException();
+        _logger.LogInformation("Connection string: {0}", connectionString);
+        
         // Create a CloudStorageAccount object and connect to Azure Storage
         CloudStorageAccount storageAccount = CloudStorageAccount.Parse(connectionString);
 
         // Create a CloudTableClient object to interact with the table service
         CloudTableClient tableClient = storageAccount.CreateCloudTableClient();
 
-        // Get a reference to the table
         _table = tableClient.GetTableReference(TableName);
     }
 

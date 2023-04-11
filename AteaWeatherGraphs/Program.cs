@@ -15,12 +15,6 @@ builder.Services.AddScoped<IWeatherDataRepository, WeatherDataRepository>();
 builder.Services.AddDbContext<WeatherDbContext>(options =>
 {
     options.UseSqlite(builder.Configuration.GetConnectionString("WeatherDataDb"));
-    // Create the database if it doesn't exist
-    using (var context = new WeatherDbContext(new DbContextOptions<WeatherDbContext>()))
-    {
-        context.Database.EnsureCreated();
-    }
-    
 });
 
 
@@ -40,10 +34,12 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Weather}/{action=Index}/{id?}");
+
 
 app.Run();

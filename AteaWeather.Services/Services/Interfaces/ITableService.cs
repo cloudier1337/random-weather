@@ -6,7 +6,7 @@ namespace AteaWeather.Services.Services.Interfaces;
 
 public interface ITableService
 {
-    void Initialize(string connectionString);
+    void Initialize();
     Task<List<LogRecordEntityDto>> GetLogsAsync(DateTime from, DateTime to);
     Task InsertLog(LogRecordEntityDto record);
 }

@@ -5,4 +5,4 @@ riderModule.iml
 /_ReSharper.Caches/
 *.local.json
 *.Development.json
-local.**.json
+local.*.json

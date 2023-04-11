@@ -2,6 +2,7 @@
 @model System.Collections.Generic.List<AteaWeatherGraphs.Models.WeatherData>
 
 <div>
+    <button id="updateChartsBtn">Update Charts</button>
     <canvas id="minTempChart"></canvas>
 </div>
 
@@ -12,6 +13,10 @@
 @section Scripts {
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
+        $('#updateChartsBtn').click(function() {
+            updateCharts();
+        });
+        
         // Initialize charts
         var minTempChart = new Chart(document.getElementById('minTempChart').getContext('2d'), {
             type: 'bar',
@@ -27,11 +32,12 @@
             },
             options: {
                 scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
+                    x: {
+                        type: 'linear'
+                    },
+                    y: {
+                        type: 'linear'
+                    }
                 }
             }
         });
@@ -50,11 +56,12 @@
             },
             options: {
                 scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
+                    x: {
+                        type: 'linear'
+                    },
+                    y: {
+                        type: 'linear'
+                    }
                 }
             }
         });
@@ -94,9 +101,8 @@
             });
         }
 
-        // Call updateCharts function initially and every minute
+
         updateCharts();
-        setInterval(updateCharts, 60000);
     </script>
 
 }

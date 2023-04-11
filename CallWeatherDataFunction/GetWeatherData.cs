@@ -8,29 +8,27 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CallWeatherDataFunction;
 
-
 [Route("api")]
 [ApiController]
 public class GetWeatherDataController : ControllerBase
 {
     private readonly IBlobService _blobService;
     private readonly ITableService _tableService;
-    
+
     public GetWeatherDataController(IBlobService blobService, ITableService tableService)
     {
         _blobService = blobService;
         _tableService = tableService;
     }
-    
+
     // GET
     [HttpGet]
     [Route("get_logs")]
     public async Task<ActionResult<LogRecordEntityDto>> GetLogs(DateTime fromDateTime, DateTime toDateTime)
     {
-        
         try
         {
-            _tableService.Initialize("myconnectionstring");
+            _tableService.Initialize();
 
             // Retrieve logs from the table storage
             List<LogRecordEntityDto> logs = await _tableService.GetLogsAsync(fromDateTime, toDateTime);
@@ -43,7 +41,7 @@ public class GetWeatherDataController : ControllerBase
             return this.StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
         }
     }
-    
+
     // GET
     [HttpGet]
     [Route("get_blob")]
@@ -51,7 +49,7 @@ public class GetWeatherDataController : ControllerBase
     {
         try
         {
-            _blobService.Initialize("myconnectionstring");
+            _blobService.Initialize();
             // Retrieve blob content
             string blobContent = await _blobService.GetBlobAsync(blobName);
 

@@ -4,7 +4,7 @@ namespace AteaWeather.Services.Services.Interfaces;
 
 public interface IBlobService
 {
-    void Initialize(string connectionString);
+    void Initialize();
     Task<string> GetBlobAsync(string blobName);
     Task StoreToBlob(string blobName, string blobContent);
 }

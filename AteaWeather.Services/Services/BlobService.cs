@@ -1,6 +1,8 @@
 using System.IO;
 using System.Threading.Tasks;
 using AteaWeather.Services.Services.Interfaces;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Blob;
 
@@ -8,14 +10,25 @@ namespace AteaWeather.Services.Services;
 
 public class BlobService : IBlobService
 {
-    private static CloudBlobClient _client;
-    private static string _containerName;
+    private static CloudBlobClient? _client;
+    private static string? _containerName;
+    private readonly IConfiguration _configuration;
+    private readonly ILogger<TableService> _logger;
 
-    public void Initialize(string connectionString)
+    public BlobService(IConfiguration configuration, ILogger<TableService> logger)
     {
+        _configuration = configuration;
+        _logger = logger;
+        _containerName = "payloads";
+    }
+
+    public void Initialize()
+    {
+        string connectionString = _configuration["AzureWebJobsStorage"] ?? throw new InvalidOperationException();
+        _logger.LogInformation("Connection string: {0}", connectionString);
+
         var storageAccount = CloudStorageAccount.Parse(connectionString);
         _client = storageAccount.CreateCloudBlobClient();
-        _containerName = "payloads";
     }
 
     public async Task<string> GetBlobAsync(string blobName)

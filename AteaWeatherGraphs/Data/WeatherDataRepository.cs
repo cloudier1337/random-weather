@@ -13,7 +13,11 @@ public class WeatherDataRepository : IWeatherDataRepository
 
     public async Task<IEnumerable<WeatherData>> GetWeatherDataAsync()
     {
-        return await _dbContext.WeatherData.ToListAsync();
+        var weatherData = await  _dbContext.WeatherData
+            .Where(x => x.LastUpdate >= DateTime.UtcNow.AddHours(-2))
+            .ToListAsync();
+        
+        return weatherData;
     }
 
     public async Task<WeatherData> GetWeatherDataByIdAsync(int id)
